@@ -18,6 +18,13 @@ module Voquotes
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
 
+    # 標準言語を日本語に設定
+    config.i18n.default_locale = :ja
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}').to_s]
+
+    # タイムゾーンを東京に設定
+    config.time_zone = 'Tokyo'
+
     # viewのテンプレートエンジンをslimに変更
     config.generators.template_engine = :slim
 
