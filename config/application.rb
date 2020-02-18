@@ -18,6 +18,9 @@ module Voquotes
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
 
+    # viewのテンプレートエンジンをslimに変更
+    config.generators.template_engine = :slim
+
     # RSpecの設定
     config.generators do |g|
       g.helper false
