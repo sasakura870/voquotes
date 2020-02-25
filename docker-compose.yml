@@ -13,6 +13,7 @@ services:
       - "3000:3000"
     environment:
       - WEBPACKER_DEV_SERVER_HOST=webpacker
+      - RUBYOPT=-W:no-deprecated -W:no-experimental
     depends_on:
       - db
   webpacker:
