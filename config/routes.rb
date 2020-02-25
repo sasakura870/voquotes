@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   resources :celebrities, only: %i[index show]
   resources :categories, only: %i[index show]
 
-  root 'celebrities#index'
+  root 'quotes#index'
 end
