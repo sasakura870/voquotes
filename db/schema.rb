@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_22_081958) do
+ActiveRecord::Schema.define(version: 2020_02_25_035855) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,6 +19,15 @@ ActiveRecord::Schema.define(version: 2020_02_22_081958) do
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "category_maps", force: :cascade do |t|
+    t.bigint "quotes_id", null: false
+    t.bigint "categories_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["categories_id"], name: "index_category_maps_on_categories_id"
+    t.index ["quotes_id"], name: "index_category_maps_on_quotes_id"
   end
 
   create_table "celebrities", force: :cascade do |t|
@@ -37,5 +46,7 @@ ActiveRecord::Schema.define(version: 2020_02_22_081958) do
     t.index ["celebrity_id"], name: "index_quotes_on_celebrity_id"
   end
 
+  add_foreign_key "category_maps", "categories", column: "categories_id"
+  add_foreign_key "category_maps", "quotes", column: "quotes_id"
   add_foreign_key "quotes", "celebrities"
 end
