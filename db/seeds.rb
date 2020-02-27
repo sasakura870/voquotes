@@ -15,7 +15,7 @@ end
     q = celeb.quotes.create content: Faker::Quote.matz
     3.times do
       map = q.category_maps.build category_id: Category.all.pluck(:id).sample
-      map.save
+      map.save if map.valid?
     end
   end
 end
