@@ -1,4 +1,4 @@
 class CategoryMap < ApplicationRecord
-  belongs_to :quotes
-  belongs_to :categories
+  belongs_to :quote
+  belongs_to :category
 end
