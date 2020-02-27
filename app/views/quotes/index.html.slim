@@ -1,2 +1,6 @@
-h1 Quotes#index
-p Find me in app/views/quotes/index.html.slim
+- @quotes.each do |quote|
+  .p-quote-card
+    h1 = quote.celebrity.name
+    p = quote.content
+    - quote.categories.each do |category|
+      p = category.name

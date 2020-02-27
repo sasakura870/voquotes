@@ -1,5 +1,6 @@
 class QuotesController < ApplicationController
   def index
+    @quotes = Quote.limit 10
   end
 
   def show
