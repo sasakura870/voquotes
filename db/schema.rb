@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_26_010710) do
+ActiveRecord::Schema.define(version: 2020_02_27_005336) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,12 +22,12 @@ ActiveRecord::Schema.define(version: 2020_02_26_010710) do
   end
 
   create_table "category_maps", force: :cascade do |t|
-    t.bigint "quotes_id", null: false
-    t.bigint "categories_id", null: false
+    t.bigint "quote_id", null: false
+    t.bigint "category_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["categories_id"], name: "index_category_maps_on_categories_id"
-    t.index ["quotes_id"], name: "index_category_maps_on_quotes_id"
+    t.index ["category_id"], name: "index_category_maps_on_category_id"
+    t.index ["quote_id"], name: "index_category_maps_on_quote_id"
   end
 
   create_table "celebrities", force: :cascade do |t|
@@ -46,7 +46,7 @@ ActiveRecord::Schema.define(version: 2020_02_26_010710) do
     t.index ["celebrity_id"], name: "index_quotes_on_celebrity_id"
   end
 
-  add_foreign_key "category_maps", "categories", column: "categories_id"
-  add_foreign_key "category_maps", "quotes", column: "quotes_id"
+  add_foreign_key "category_maps", "categories"
+  add_foreign_key "category_maps", "quotes"
   add_foreign_key "quotes", "celebrities"
 end
