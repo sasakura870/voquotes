@@ -4,6 +4,12 @@
 
 @import "ress";
 
+/*===============================
+foundation
+================================*/
+
+@import "./foundation/variables";
+
 p {
   background: blue;
 }
