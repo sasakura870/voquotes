@@ -11,6 +11,27 @@ foundation
 @import "./foundation/variables";
 @import "./foundation/reset";
 
+/*===============================
+	layout
+================================*/
+
+@import "./layout/header";
+
+/*===============================
+	component
+================================*/
+
+/*===============================
+	project
+================================*/
+
+@import "./object/project/header";
+
+/*===============================
+	util
+================================*/
+
 p {
   background: blue;
+  color: white;
 }
