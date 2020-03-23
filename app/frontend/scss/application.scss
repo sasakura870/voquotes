@@ -3,7 +3,42 @@
 ================================*/
 
 @import "ress";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+$fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+
+/*===============================
+foundation
+================================*/
+
+@import "./foundation/variables";
+@import "./foundation/reset";
+
+/*===============================
+	layout
+================================*/
+
+@import "./layout/header";
+
+/*===============================
+	component
+================================*/
+
+@import "./object/component/link";
+
+/*===============================
+	project
+================================*/
+
+@import "./object/project/header";
+
+/*===============================
+	util
+================================*/
 
 p {
-  background: blue;
+	background: blue;
+	color: white;
 }
