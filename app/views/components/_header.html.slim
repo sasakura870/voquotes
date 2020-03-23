@@ -1,3 +1,7 @@
 header#header.l-header
   nav.p-header
-    span VOJoke
+    .p-header__left
+      .p-header__logo = link_to 'VoJoke', root_path, class: 'c-link'
+    .p-header__right
+      .p-header__menu
+        i.fas.fa-bars

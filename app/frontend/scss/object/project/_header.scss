@@ -2,4 +2,19 @@
   max-width: $global-page-width;
   margin: 0 auto;
   display: flex;
+  justify-content: space-between;
+
+  &__left {}
+
+  &__logo {
+    font-size: 2.4rem;
+    margin-right: 1em;
+  }
+
+  &__right {}
+
+  &__menu {
+    font-size: 2.4rem;
+    color: white;
+  }
 }
