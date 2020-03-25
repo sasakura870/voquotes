@@ -20,6 +20,7 @@ foundation
 	layout
 ================================*/
 
+@import "./layout/container";
 @import "./layout/header";
 
 /*===============================
@@ -33,6 +34,8 @@ foundation
 ================================*/
 
 @import "./object/project/header";
+@import "./object/project/home";
+@import "./object/project/quote-card";
 
 /*===============================
 	util
