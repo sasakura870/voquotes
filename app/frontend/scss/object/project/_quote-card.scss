@@ -1,16 +1,25 @@
 .p-quote-card {
   border: 3px solid black;
-  border-radius: 20%;
+  border-radius: 16px;
   margin-bottom: 1em;
   padding: 1em;
 
   &__ribbon {}
 
-  &__quote {}
+  &__quote {
+    font-size: 2.4rem;
+    margin-bottom: 1em;
+  }
 
-  &__footer {}
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-  &__celebrity {}
+  &__celebrity {
+    font-style: italic;
+  }
 
   &__btn-space {}
 }
