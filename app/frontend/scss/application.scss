@@ -27,6 +27,7 @@ foundation
 	component
 ================================*/
 
+@import "./object/component/button";
 @import "./object/component/link";
 
 /*===============================
@@ -40,8 +41,3 @@ foundation
 /*===============================
 	util
 ================================*/
-
-p {
-	background: blue;
-	color: white;
-}
