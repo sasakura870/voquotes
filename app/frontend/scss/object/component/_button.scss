@@ -1,5 +1,6 @@
 .c-btn {
   background: $main-color;
+  color: white;
   display: inline-block;
   padding: 0.3em 1em;
   border-radius: 5px;
@@ -9,5 +10,21 @@
     text-decoration: none;
     background: darken($main-color, 10);
     color: white;
+  }
+
+  &--tweet {
+    background: $twitter-color;
+
+    &::before {
+      font-family: "Font Awesome 5 Brands";
+      font-weight: 900;
+      // font-size: .8em;
+      content: "\f099";
+      padding-right: 1em;
+    }
+
+    &:hover {
+      background: darken($twitter-color, 10);
+    }
   }
 }
