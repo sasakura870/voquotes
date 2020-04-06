@@ -4,7 +4,39 @@
   margin-bottom: 1em;
   padding: 1em;
 
-  &__ribbon {}
+  &__ribbon {
+    display: inline-block;
+    position: relative;
+    background: $highlight-color;
+    color: white;
+    font-size: 2rem;
+    margin-bottom: .5em;
+    padding: .2em 2em;
+    left: -1.5em;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 100%;
+      left: 0;
+      z-index: -1;
+      border: none;
+      border-bottom: solid 1em transparent;
+      /*折り返し部分*/
+      border-right: solid 1em darken($highlight-color, 10);
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      top: 0;
+      right: -.5em;
+      width: .5em;
+      height: 100%;
+      background: linear-gradient(to bottom right, $highlight-color 50%, transparent 50%) top / 100% 50% no-repeat,
+        linear-gradient(to top right, $highlight-color 50%, transparent 50%) bottom / 100% 50% no-repeat;
+    }
+  }
 
   &__quote {
     font-size: 2.4rem;
