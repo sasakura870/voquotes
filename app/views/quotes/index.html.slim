@@ -4,3 +4,4 @@
   .p-home__contents
     - @quotes.each do |quote|
       = render partial: 'components/quote-card', locals: { quote: quote }
+    p = @result
