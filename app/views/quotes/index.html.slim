@@ -3,5 +3,4 @@
     h1.p-home__title VoQuotes
   .p-home__contents
     - @quotes.each do |quote|
-      = render partial: 'components/quote-card', locals: { quote: quote }
-    p = @result
+      = render partial: 'components/quote-card', locals: { quote: quote, rnd: rand(1..5) }

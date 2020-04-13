@@ -24,8 +24,6 @@ class Pixabay
           result = JSON.parse response.body
         when Net::HTTPRedirection
           result = response
-          # redirect_uri = URI.parse response['location']
-          # result = get_request uri: redirect_uri
         else
           result = { message: "HTTP ERROR: code=#{response.code} message=#{response.message}" }
         end
