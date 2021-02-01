@@ -20,12 +20,14 @@ foundation
 	layout
 ================================*/
 
+@import "./layout/container";
 @import "./layout/header";
 
 /*===============================
 	component
 ================================*/
 
+@import "./object/component/button";
 @import "./object/component/link";
 
 /*===============================
@@ -33,12 +35,9 @@ foundation
 ================================*/
 
 @import "./object/project/header";
+@import "./object/project/home";
+@import "./object/project/quote-card";
 
 /*===============================
 	util
 ================================*/
-
-p {
-	background: blue;
-	color: white;
-}

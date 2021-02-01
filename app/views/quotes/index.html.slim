@@ -1,6 +1,6 @@
-- @quotes.each do |quote|
-  .p-quote-card
-    h1 = quote.celebrity.name
-    p = quote.content
-    - quote.categories.each do |category|
-      p = category.name
+.p-home
+  .p-home__header
+    h1.p-home__title VoQuotes
+  .p-home__contents
+    - @quotes.each do |quote|
+      = render partial: 'components/quote-card', locals: { quote: quote, rnd: rand(1..5) }

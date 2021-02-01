@@ -3,12 +3,9 @@ class QuotesController < ApplicationController
     @quotes = Quote.limit 10
   end
 
-  def show
-  end
+  def show; end
 
-  def new
-  end
+  def new; end
 
-  def create
-  end
+  def create; end
 end

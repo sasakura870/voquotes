@@ -1,0 +1,7 @@
+.p-quote-card class="p-quote-card--#{rnd}"
+  span.p-quote-card__ribbon = "#{quote.value}票"
+  p.p-quote-card__quote = quote.content
+  .p-quote-card__footer
+    p.p-quote-card__celebrity = quote.celebrity.name
+    .p-quote-card__btn-space
+      button.c-btn.c-btn--tweet ツイートして投票
